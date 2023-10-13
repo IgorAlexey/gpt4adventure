@@ -1,7 +1,10 @@
 from rich import print
 from rich.text import Text
+from dotenv import load_dotenv
 import os
 import openai
+
+load_dotenv()
 
 system_txt = open("system.txt", "r")
 system_prompt = system_txt.read()

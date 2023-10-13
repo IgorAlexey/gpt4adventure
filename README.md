@@ -4,15 +4,18 @@ Ressurecting text-adventure games with GPT4 and coloring the output.
 
 ## Instructions
 
-1. Create an environment table named `OPENAI_API_KEY`
+1. Clone & install the requirements...
 ```shell
-# Windows
-setx OPENAI_API_KEY “your key”
-# linux
-export OPENAI_API_KEY="your key"
+git clone https://github.com/Sororfortuna/gpt4adventure.git
+cd gpt4adventure && pip install -r requirments.txt
 ```
 
-2. launch with `python main.py` in a reliable terminal.
+2. Create a .env file with your API key
+```ini
+OPENAI_API_KEY=sk-...
+```
+
+1. launch with `python main.py` in a reliable terminal.
 
 ### Ideas...
 
