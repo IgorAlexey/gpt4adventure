@@ -1,14 +1,24 @@
 from rich import print
 from rich.text import Text
+from rich.errors import MarkupError
 from dotenv import load_dotenv
 import os
+import sys
 import openai
 
 load_dotenv()
 
-system_txt = open("system.txt", "r")
-system_prompt = system_txt.read()
-system_txt.close()
+
+def clear_screen():
+    if sys.platform == "win32":
+        os.system("cls")
+    else:
+        os.system("clear")
+
+
+file = open("system.txt", "r")
+system_prompt = file.read()
+file.close()
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
@@ -24,22 +34,11 @@ chat = [
 ]
 
 
-def print_messages():
-    for message in chat:
-        try:
-            message_content = Text.from_markup(message["content"])
-        except MarkupError:
-            message_content = message["content"]
-
-        if message["role"] != "system":
-            print("\n" + message_content)
+def append_to_chat(role, content):
+    chat.append({"role": role, "content": content})
 
 
-while True:
-    os.system("clear")
-    print_messages()
-    action = "> " + input("\n> ")
-    chat.append({"role": "user", "content": action})
+def get_chat_response():
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=chat,
@@ -49,6 +48,24 @@ while True:
         frequency_penalty=0,
         presence_penalty=0,
     )
-    chat.append(
-        {"role": "assistant", "content": response["choices"][0]["message"]["content"]}
-    )
+    return response["choices"][0]["message"]["content"]
+
+
+def print_chat():
+    for message in chat:
+        if message["role"] != "system":
+            try:
+                message_content = Text.from_markup(message["content"])
+            except MarkupError:
+                message_content = message["content"]
+
+            print("\n", message_content)
+
+
+while True:
+    clear_screen()
+    print_chat()
+    action = input("\n> ")
+    append_to_chat("user", "> " + action)
+    assistant_response = get_chat_response()
+    append_to_chat("assistant", assistant_response)
