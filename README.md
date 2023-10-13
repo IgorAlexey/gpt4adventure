@@ -10,7 +10,7 @@ git clone https://github.com/Sororfortuna/gpt4adventure.git
 cd gpt4adventure && pip install -r requirements.txt
 ```
 
-2. Create a .env file with your API key
+2. Create a file named `.env` with your API key
 ```ini
 OPENAI_API_KEY=sk-...
 ```
@@ -21,4 +21,4 @@ OPENAI_API_KEY=sk-...
 
 This is a very simple implementation of a text-adventure game. The app can be extended to use other tools like [stable-diffusion](https://stability.ai/stable-diffusion) in order to generate image of the scenarios for example, in which case, it could be better to have a custom terminal interface rather than converting the images to colored ASCII characters...
 
-If you want to contribute, feel free to create PRs, Issues
+If you want to contribute, feel free to create PRs, Issues.
