@@ -1,6 +1,10 @@
-# gpt4adventure
+<h1 align="center">GPT 4 Adventure</h1>
 
-Ressurecting text-adventure games with GPT4 and coloring the output.
+<p align="center">
+<img src="https://github.com/Sororfortuna/gpt4adventure/assets/18470725/3bfff2a5-1480-40b6-8baa-c400242fa484">
+<br>
+<sub>Ressurecting text-adventure games with GPT4 and coloring the output.</sub>
+</p>
 
 ## Instructions
 
