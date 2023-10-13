@@ -66,6 +66,13 @@ while True:
     clear_screen()
     print_chat()
     action = input("\n> ")
-    append_to_chat("user", "> " + action)
-    assistant_response = get_chat_response()
-    append_to_chat("assistant", assistant_response)
+    if action.lower() == "undo":
+        if len(chat) > 2:  # Check to ensure we don't pop beyond chat length
+            chat.pop()  # Remove assistant's last response
+            chat.pop()  # Remove user's last message
+        else:
+            print("No actions to undo.")
+    else:
+        append_to_chat("user", "> " + action)
+        assistant_response = get_chat_response()
+        append_to_chat("assistant", "> " + assistant_response)
