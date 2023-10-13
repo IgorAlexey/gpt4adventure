@@ -7,7 +7,7 @@ Ressurecting text-adventure games with GPT4 and coloring the output.
 1. Clone & install the requirements...
 ```shell
 git clone https://github.com/Sororfortuna/gpt4adventure.git
-cd gpt4adventure && pip install -r requirments.txt
+cd gpt4adventure && pip install -r requirements.txt
 ```
 
 2. Create a .env file with your API key
