@@ -19,26 +19,31 @@ chat = [
     },
     {
         "role": "assistant",
-        "content": "Welcome to [bold cyan]Adventure[/]. The genesis of your story awaits your input.\n\n[bold]Be warned[/]: [u]The pen is mightier than the sword[/]. Every word you inscribe may brand your path with [bold red]irreversible marks[/].\n\nMay the wisdom of the ancients guide your choices.\n\nIn your words, proffer the beginning you wish for your fable",
+        "content": "Welcome to [bold cyan]Adventure[/] - The genesis of your story awaits...\n\n[bold]Disclaimer[/]: The pen is mightier than the sword, every word you inscribe may brand your path with [b red]irreversible marks[/]. May the wisdom of the ancients guide your choices.\n\nIn your words, proffer the beginning you wish for your fable",
     },
 ]
 
 
 def print_messages():
     for message in chat:
+        try:
+            message_content = Text.from_markup(message["content"])
+        except MarkupError:
+            message_content = message["content"]
+
         if message["role"] != "system":
-            print(Text.from_markup(message["content"]))
+            print("\n" + message_content)
 
 
 while True:
     os.system("clear")
     print_messages()
-    action = "> " + input("> ")
+    action = "> " + input("\n> ")
     chat.append({"role": "user", "content": action})
     response = openai.ChatCompletion.create(
         model="gpt-4",
         messages=chat,
-        temperature=1.1,
+        temperature=1.05,
         max_tokens=853,
         top_p=1,
         frequency_penalty=0,
