@@ -9,13 +9,11 @@ from art import *
 
 load_dotenv()
 
-
 def clear_screen():
     if sys.platform == "win32":
         os.system("cls")
     else:
         os.system("clear")
-
 
 file = open("system.txt", "r")
 system_prompt = file.read()
@@ -39,10 +37,8 @@ chat = [
     },
 ]
 
-
 def append_to_chat(role, content):
     chat.append({"role": role, "content": content})
-
 
 def get_chat_response():
     response = openai.ChatCompletion.create(
@@ -56,16 +52,15 @@ def get_chat_response():
     )
     return response["choices"][0]["message"]["content"]
 
-
 def print_chat():
     for message in chat:
         if message["role"] != "system":
+            message_content = ""
             try:
                 message_content = Text.from_markup(message["content"])
-                print("\n", message_content)
             except MarkupError:
                 message_content = message["content"]
-                print("\n", message_content)
+            print("\n", message_content)
 
 while True:
     clear_screen()
