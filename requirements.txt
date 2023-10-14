@@ -1,3 +1,4 @@
 rich
 openai
 python-dotenv
+climage

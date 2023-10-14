@@ -1,0 +1,7 @@
+[b green]Welcome[/], [b]Player[/]!
+Navigate the world as if you were writing your own story.
+Instead of clicking lines of pre-set dialogue, [b]type your actions[/].
+
+Beware, choices matter, [b red]Death[/] is a possibility, continue at your own risk.
+
+To start, [b]Please introduce your new RPG[/].
