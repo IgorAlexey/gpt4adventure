@@ -5,6 +5,7 @@
 <br>
 <sub>Ressurecting text-adventure games with GPT4 and coloring the output.</sub>
 </p>
+
 ## Instructions
 
 1. Clone & install the requirements...
@@ -18,7 +19,7 @@ cd gpt4adventure && pip install -r requirements.txt
 OPENAI_API_KEY=sk-...
 ```
 
-1. launch with `python main.py` in a reliable terminal.
+3. launch with `python main.py` in a reliable terminal. 
 
 ### Ideas...
 
