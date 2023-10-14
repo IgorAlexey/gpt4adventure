@@ -1,11 +1,10 @@
 <h1 align="center">GPT 4 Adventure</h1>
 
 <p align="center">
-<img src="https://github.com/Sororfortuna/gpt4adventure/assets/18470725/3bfff2a5-1480-40b6-8baa-c400242fa484">
+<img src="https://github.com/Sororfortuna/gpt4adventure/assets/18470725/35a0566c-cd65-4b55-9d0e-501a4f69cc3c" width=600px>
 <br>
 <sub>Ressurecting text-adventure games with GPT4 and coloring the output.</sub>
 </p>
-
 ## Instructions
 
 1. Clone & install the requirements...
