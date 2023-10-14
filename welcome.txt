@@ -1,8 +1,8 @@
-[b green]Welcome[/], [b]Player[/]!
+[bold green]Welcome[/], [bold]Player[/]!
 
-Navigate the world by [b]writing your own actions[/]
+Navigate the world by [bold]writing your own actions[/]
 
-Beware, choices matter, [b red]Death[/] is a possibility!
+Beware, choices matter, [bold red]Death[/] is a possibility!
 Continue at your own risk.
 
-To start, [b]Please introduce your new RPG[/].
+To start, [bold]Please introduce your new RPG[/].
