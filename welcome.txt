@@ -5,4 +5,4 @@ Navigate the world by [bold]writing your own actions[/]
 Beware, choices matter, [bold red]Death[/] is a possibility!
 Continue at your own risk.
 
-To start, [bold]Please introduce your new RPG[/].
+To start, [bold]Please describe the initial scenario[/].
